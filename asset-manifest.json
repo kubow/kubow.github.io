@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.5b22f7cf.css",
-    "main.js": "/static/js/main.0b894f34.js",
+    "main.css": "/static/css/main.7f090bdd.css",
+    "main.js": "/static/js/main.66be5482.js",
     "static/media/Indigo-v2.svg": "/static/media/Indigo-v2.d78601c886e9c5a8c053.svg",
     "static/media/Indigo-v2.eot": "/static/media/Indigo-v2.47315ce2f169bd1b7cc3.eot",
     "static/media/Indigo-v2.woff": "/static/media/Indigo-v2.7a114bf75cd89a7f5bad.woff",
     "static/media/Indigo-v2.ttf": "/static/media/Indigo-v2.d219acae0f72141eceb0.ttf",
-    "static/media/kpi.png": "/static/media/kpi.b8a5e3b902f26a314b9b.png",
     "static/media/slack.svg": "/static/media/slack.0f0ff7f287e4cf1c93c9.svg",
     "static/media/powered-by-gd-large.svg?v=2022": "/static/media/powered-by-gd-large.574ab261eca88c10c517.svg",
     "static/media/powered-by-gd-small.svg?v=2022": "/static/media/powered-by-gd-small.639ebb0e8933df388a31.svg",
@@ -113,11 +112,11 @@
     "static/media/column.svg": "/static/media/column.467379363bcc1514838c.svg",
     "static/media/bar-active.svg": "/static/media/bar-active.5895a8d9c6a89d26a282.svg",
     "static/media/bar.svg": "/static/media/bar.90866ed3a9a7a227af84.svg",
-    "main.5b22f7cf.css.map": "/static/css/main.5b22f7cf.css.map",
-    "main.0b894f34.js.map": "/static/js/main.0b894f34.js.map"
+    "main.7f090bdd.css.map": "/static/css/main.7f090bdd.css.map",
+    "main.66be5482.js.map": "/static/js/main.66be5482.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b22f7cf.css",
-    "static/js/main.0b894f34.js"
+    "static/css/main.7f090bdd.css",
+    "static/js/main.66be5482.js"
   ]
 }
