@@ -1,1 +1,63 @@
-<!doctype html><html lang="en"><head><meta content="text/html; charset=utf-8"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GoodData React App</title><script type="module" crossorigin src="/assets/index-CCG1ubnH.js"></script><link rel="stylesheet" crossorigin href="/assets/index-DABzAJQb.css"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded GoodData Dashboard (SSO)</title>
+    <style>
+        body {
+            font-family: "Avenir", "Helvetica Neue", Arial, sans-serif;
+        }
+        frame {
+            border-top: 1px solid silver;
+        }
+    </style>
+</head>
+<body>
+    <pre id="embedded-description"></pre>
+    <iframe 
+        id="embedded-content"
+        src="https://sandrasuszterova.demo.cloud.gooddata.com/dashboards/embedded/#/workspace/1607d814f864430b8fd586fa14fcdc1e/dashboard/0f678b1b-3e61-449a-b6d1-3714e7375751?apiTokenAuthentication=true&showNavigation=false&setHeight=1000" 
+        height="1000px" 
+        width="100%" 
+        frameborder="0"></iframe>
+    <script>
+        console.log("#PARENT: Setup parent message listener");
+
+        //?apiTokenAuthentication=true                 needs to be added to the address
+
+        window.addEventListener(
+            "message",
+            function (e) {
+                console.log("#PARENT: Post message received", e.data.gdc.event)
+                if (e.data.gdc?.event.name == "listeningForApiToken"){
+                    const postMessageStructure = {
+                        gdc: {
+                            product: "dashboard",
+                            event: {
+                                name: "setApiToken",
+                                data: {
+                                    token: "amFrdWIudmFqZGE6cHVibGljX2VtYmVkOllhdUpoa0VKZW5sYXlmOXJkK0VaVTVvODN4dVRvdVhK"
+                                }
+                            }
+                        }
+                    };
+                    console.log("#PARENT: Sending token to embedded window", postMessageStructure);
+                    
+                    const origin = "*";
+                    const iframe = document.getElementById("embedded-content").contentWindow;
+                    iframe.postMessage(postMessageStructure, origin);
+                }
+            },
+            false
+        ); 
+
+        window.onload = function() {
+            const iframe = document.getElementById("embedded-content");
+            const pre = document.getElementById("embedded-description");
+            pre.innerHTML = "<h2>E-Government Knowledgebase</h2>" //iframe.src;
+        };
+    </script>
+</body>
+</html>
