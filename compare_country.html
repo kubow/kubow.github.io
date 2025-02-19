@@ -36,9 +36,17 @@
         function navigateToPage(select) {
             var value = select.value;
             if (value) {
+                localStorage.setItem('selectedPage', value);
                 window.location.href = value;
             }
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var savedValue = localStorage.getItem('selectedPage');
+            if (savedValue) {
+                document.querySelector(".dropdown-container select").value = savedValue;
+            }
+        });
     </script>
 </head>
 <body>
