@@ -3,6 +3,8 @@ import yaml
 import sys
 import shutil
 import traceback
+import re
+from html import unescape
 from jinja2 import Environment, FileSystemLoader
 
 # Chart generation imports
@@ -136,10 +138,29 @@ def render_template(template_name, output_path, **kwargs):
     # Add markdown filter
     try:
         import markdown
-        env.filters['markdown'] = lambda text: markdown.markdown(text)
+
+        def markdown_to_html(text):
+            return markdown.markdown(text)
+
+        def markdown_inline(text):
+            html = markdown_to_html(text).strip()
+            if html.startswith('<p>') and html.endswith('</p>'):
+                html = html[3:-4]
+            return html
+
+        def markdown_text(text):
+            html = markdown_inline(text)
+            text_only = re.sub(r'<[^>]+>', '', html)
+            return unescape(text_only)
+
+        env.filters['markdown'] = markdown_to_html
+        env.filters['markdown_inline'] = markdown_inline
+        env.filters['markdown_text'] = markdown_text
     except ImportError:
         print("Warning: 'markdown' module not found. Markdown rendering will be disabled.")
         env.filters['markdown'] = lambda text: text
+        env.filters['markdown_inline'] = lambda text: text
+        env.filters['markdown_text'] = lambda text: text
 
     template = env.get_template(template_name)
     

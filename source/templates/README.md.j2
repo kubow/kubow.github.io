@@ -14,9 +14,9 @@
 
 <div style="display: flex;flex-wrap: wrap;width: 100%;">
 {% for social in profile.social_links %}
-	<a href="{{ social.url }}" target="_blank">
-		<img align="{{ social.align }}" alt="{{ profile.github_username }} | {{ social.platform|lower }}" src="{{ social.icon }}" {% if social.width %}width="{{ social.width }}"{% endif %}/>
-	</a>
+<a href="{{ social.url }}" target="_blank">
+<img align="{{ social.align }}" alt="{{ profile.github_username }} | {{ social.platform|lower }}" src="{{ social.icon }}" {% if social.width %}width="{{ social.width }}"{% endif %}/>
+</a>
 {% endfor %}
 </div>
 

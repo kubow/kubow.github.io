@@ -10,6 +10,44 @@
 
 ![](https://komarev.com/ghpvc/?username=kubow&color=yellow)
 
+## My presence is being felt here
+
+<div style="display: flex;flex-wrap: wrap;width: 100%;">
+
+<a href="https://github.com/kubow" target="_blank">
+<img align="left" alt="kubow | github" src="https://www.vectorlogo.zone/logos/github/github-ar21.svg" />
+</a>
+
+<a href="https://app.slack.com/" target="_blank">
+<img align="left" alt="kubow | slack" src="https://www.vectorlogo.zone/logos/slack/slack-ar21.svg" />
+</a>
+
+<a href="https://discord.com/channels/@me" target="_blank">
+<img align="left" alt="kubow | discord" src="https://www.vectorlogo.zone/logos/discord/discord-ar21.svg" />
+</a>
+
+<a href="https://stackoverflow.com/users/6905166/kube-kubow" target="_blank">
+<img align="left" alt="kubow | stackoverflow" src="https://www.vectorlogo.zone/logos/stackoverflow/stackoverflow-ar21.svg" />
+</a>
+
+<a href="https://share.streamlit.io/user/kubow" target="_blank">
+<img align="left" alt="kubow | streamlit" src="https://docs.streamlit.io/logo.svg" />
+</a>
+
+<a href="https://www.quora.com/profile/Kube-Kubow?q=kubow" target="_blank">
+<img align="left" alt="kubow | quora" src="https://www.vectorlogo.zone/logos/quora/quora-ar21.svg" />
+</a>
+
+<a href="https://www.reddit.com/user/kubowww" target="_blank">
+<img align="left" alt="kubow | reddit" src="https://www.vectorlogo.zone/logos/reddit/reddit-ar21.svg" />
+</a>
+
+<a href="https://www.deviantart.com/kube-kubow" target="_blank">
+<img align="left" alt="kubow | deviantart" src="https://logos-world.net/wp-content/uploads/2020/11/DeviantArt-Logo-700x394.png" width="100px"/>
+</a>
+
+</div>
+
 I am currently spending the majority of my time around [GoodData's integrations](https://github.com/kubow?tab=repositories&q=gooddata&type=&language=&sort=) with various types of systems.
 
 
@@ -44,45 +82,6 @@ I am also creating small applications with a very specific usage:
 - [Python universal browser/editor](https://github.com/kubow/JSONXML_editor) (currently JSON, XML and CSV files)
 
 
-
-
-## My presence is being felt here
-
-<div style="display: flex;flex-wrap: wrap;width: 100%;">
-
-	<a href="https://github.com/kubow" target="_blank">
-		<img align="left" alt="kubow | github" src="https://www.vectorlogo.zone/logos/github/github-ar21.svg" />
-	</a>
-
-	<a href="https://app.slack.com/" target="_blank">
-		<img align="left" alt="kubow | slack" src="https://www.vectorlogo.zone/logos/slack/slack-ar21.svg" />
-	</a>
-
-	<a href="https://discord.com/channels/@me" target="_blank">
-		<img align="left" alt="kubow | discord" src="https://www.vectorlogo.zone/logos/discord/discord-ar21.svg" />
-	</a>
-
-	<a href="https://stackoverflow.com/users/6905166/kube-kubow" target="_blank">
-		<img align="left" alt="kubow | stackoverflow" src="https://www.vectorlogo.zone/logos/stackoverflow/stackoverflow-ar21.svg" />
-	</a>
-
-	<a href="https://share.streamlit.io/user/kubow" target="_blank">
-		<img align="left" alt="kubow | streamlit" src="https://docs.streamlit.io/logo.svg" />
-	</a>
-
-	<a href="https://www.quora.com/profile/Kube-Kubow?q=kubow" target="_blank">
-		<img align="left" alt="kubow | quora" src="https://www.vectorlogo.zone/logos/quora/quora-ar21.svg" />
-	</a>
-
-	<a href="https://www.reddit.com/user/kubowww" target="_blank">
-		<img align="left" alt="kubow | reddit" src="https://www.vectorlogo.zone/logos/reddit/reddit-ar21.svg" />
-	</a>
-
-	<a href="https://www.deviantart.com/kube-kubow" target="_blank">
-		<img align="left" alt="kubow | deviantart" src="https://logos-world.net/wp-content/uploads/2020/11/DeviantArt-Logo-700x394.png" width="100px"/>
-	</a>
-
-</div>
 
 
 ## Visual representation of my technology skill set
@@ -247,7 +246,7 @@ gantt
     
     section Science
     
-    Building encyklopedia : c1, 01-01-2003, 08-02-2026
+    Building encyklopedia : c1, 01-01-2003, 20-03-2026
     
     Environmental Chemistry : c1, 01-01-2003, 10y
     
@@ -258,19 +257,19 @@ gantt
     
     GIS (Hydrological Modelling) : 01-01-2009, 7y
     
-    Microsoft stack (Word, Excel, Access, VBA, MSSQL, PowerBI) : 01-01-2007, 08-02-2026
+    Microsoft stack (Word, Excel, Access, VBA, MSSQL, PowerBI) : 01-01-2007, 20-03-2026
     
-    Linux stack (bash, zsh, ssh, docker, git) : 01-01-2015, 08-02-2026
+    Linux stack (bash, zsh, ssh, docker, git) : 01-01-2015, 20-03-2026
     
-    Python scripting : 01-01-2010, 08-02-2026
+    Python scripting : 01-01-2010, 20-03-2026
     
-    General database concepts (diagrams, types, structure) : 01-01-2015, 08-02-2026
+    General database concepts (diagrams, types, structure) : 01-01-2015, 20-03-2026
     
     SAP (ASE, Anywhere, IQ and HANA) : 01-01-2016, 7y
     
-    GoodData Analytics : 01-01-2022, 08-02-2026
+    GoodData Analytics : 01-01-2022, 20-03-2026
     
-    Frontend (HTML, CSS, JavaScript, React, Vue) : 01-01-2018, 08-02-2026
+    Frontend (HTML, CSS, JavaScript, React, Vue) : 01-01-2018, 20-03-2026
     
     
 ```

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ profile.name }} - Portfolio</title>
+    <title>{{ profile.name | markdown_text }} - Portfolio</title>
     <!-- Use a nice font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -144,7 +144,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>{{ profile.name }}</h1>
+            <h1>{{ profile.name | markdown_inline | safe }}</h1>
             <div class="bio">
                 {{ profile.bio | markdown | safe }}
             </div>
