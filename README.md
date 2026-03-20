@@ -10,42 +10,6 @@
 
 ![](https://komarev.com/ghpvc/?username=kubow&color=yellow)
 
-I am currently spending the majority of my time around [GoodData's integrations](https://github.com/kubow?tab=repositories&q=gooddata&type=&language=&sort=) with various types of systems.
-
-
-I have recently started collaboration on an [Astrology application](https://github.com/kefer-astrology).
-
-
-
-
-My other big project is a "[Star Encyclopedia](https://github.com/kubow/h808e)" (Summarizing all things around us 🌅) with several sub-projects:
-
-- [ARMs: various machines description](https://github.com/kubow/arms)
-- [Data storing techniques](https://github.com/kubow/datastore)
-- [Mapping / GIS](https://github.com/kubow/map-model)
-- [Productivity](https://github.com/kubow/Productivity)
-- [Programming languages](https://github.com/kubow/prg-concepts)
-
-
-
-
-
-
-
-
-
-
-I am also creating small applications with a very specific usage:
-
-- [Python database logs reader](https://github.com/kubow/Sybase_Collector) (mostly SAP, Microsoft, Oracle...)
-- [Python EpaNET simple GUI](https://github.com/kubow/EpaNET-TKinter-GUI) (I plan to interconnect with Mike0/dfs)
-- [Python contacts editor](https://github.com/kubow/vcf_editor) (those ancient VCards)
-- [Python planet/moon compute](https://github.com/kubow/PlanetarySystemObserver) (using NASA JPL ephemerides)
-- [Python universal browser/editor](https://github.com/kubow/JSONXML_editor) (currently JSON, XML and CSV files)
-
-
-
-
 ## My presence is being felt here
 
 <div style="display: flex;flex-wrap: wrap;width: 100%;">
@@ -83,6 +47,41 @@ I am also creating small applications with a very specific usage:
 	</a>
 
 </div>
+
+I am currently spending the majority of my time around [GoodData's integrations](https://github.com/kubow?tab=repositories&q=gooddata&type=&language=&sort=) with various types of systems.
+
+
+I have recently started collaboration on an [Astrology application](https://github.com/kefer-astrology).
+
+
+
+
+My other big project is a "[Star Encyclopedia](https://github.com/kubow/h808e)" (Summarizing all things around us 🌅) with several sub-projects:
+
+- [ARMs: various machines description](https://github.com/kubow/arms)
+- [Data storing techniques](https://github.com/kubow/datastore)
+- [Mapping / GIS](https://github.com/kubow/map-model)
+- [Productivity](https://github.com/kubow/Productivity)
+- [Programming languages](https://github.com/kubow/prg-concepts)
+
+
+
+
+
+
+
+
+
+
+I am also creating small applications with a very specific usage:
+
+- [Python database logs reader](https://github.com/kubow/Sybase_Collector) (mostly SAP, Microsoft, Oracle...)
+- [Python EpaNET simple GUI](https://github.com/kubow/EpaNET-TKinter-GUI) (I plan to interconnect with Mike0/dfs)
+- [Python contacts editor](https://github.com/kubow/vcf_editor) (those ancient VCards)
+- [Python planet/moon compute](https://github.com/kubow/PlanetarySystemObserver) (using NASA JPL ephemerides)
+- [Python universal browser/editor](https://github.com/kubow/JSONXML_editor) (currently JSON, XML and CSV files)
+
+
 
 
 ## Visual representation of my technology skill set
@@ -247,7 +246,7 @@ gantt
     
     section Science
     
-    Building encyklopedia : c1, 01-01-2003, 08-02-2026
+    Building encyklopedia : c1, 01-01-2003, 20-03-2026
     
     Environmental Chemistry : c1, 01-01-2003, 10y
     
@@ -258,19 +257,19 @@ gantt
     
     GIS (Hydrological Modelling) : 01-01-2009, 7y
     
-    Microsoft stack (Word, Excel, Access, VBA, MSSQL, PowerBI) : 01-01-2007, 08-02-2026
+    Microsoft stack (Word, Excel, Access, VBA, MSSQL, PowerBI) : 01-01-2007, 20-03-2026
     
-    Linux stack (bash, zsh, ssh, docker, git) : 01-01-2015, 08-02-2026
+    Linux stack (bash, zsh, ssh, docker, git) : 01-01-2015, 20-03-2026
     
-    Python scripting : 01-01-2010, 08-02-2026
+    Python scripting : 01-01-2010, 20-03-2026
     
-    General database concepts (diagrams, types, structure) : 01-01-2015, 08-02-2026
+    General database concepts (diagrams, types, structure) : 01-01-2015, 20-03-2026
     
     SAP (ASE, Anywhere, IQ and HANA) : 01-01-2016, 7y
     
-    GoodData Analytics : 01-01-2022, 08-02-2026
+    GoodData Analytics : 01-01-2022, 20-03-2026
     
-    Frontend (HTML, CSS, JavaScript, React, Vue) : 01-01-2018, 08-02-2026
+    Frontend (HTML, CSS, JavaScript, React, Vue) : 01-01-2018, 20-03-2026
     
     
 ```
