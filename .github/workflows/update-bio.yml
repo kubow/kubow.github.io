@@ -1,15 +1,9 @@
 name: Update Bio
 
 on:
-  schedule:
-    - cron: '0 0 * * *' # Run daily at midnight
   push:
     branches:
-      - master
       - main
-    paths:
-      - 'data/**'
-      - 'source/**'
   workflow_dispatch:
 
 permissions:
@@ -46,4 +40,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update bio content [skip ci]"
-          file_pattern: 'README.md source/*.svg'
+          file_pattern: 'README.md docs/index.html docs/assets/*.svg'
