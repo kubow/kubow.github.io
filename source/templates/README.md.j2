@@ -12,13 +12,22 @@
 
 ## My presence is being felt here
 
-<div style="display: flex;flex-wrap: wrap;width: 100%;">
-{% for social in profile.social_links %}
+<table>
+<tr>
+{% for social in profile.social_links -%}
+<td align="center">
 <a href="{{ social.url }}" target="_blank">
-<img align="{{ social.align }}" alt="{{ profile.github_username }} | {{ social.platform|lower }}" src="{{ social.icon }}" {% if social.width %}width="{{ social.width }}"{% endif %}/>
+<img alt="{{ profile.github_username }} | {{ social.platform|lower }}" src="{{ social.icon }}" {% if social.width %}width="{{ social.width }}"{% else %}height="30"{% endif %}/><br />
+{{ social.platform }}
 </a>
+</td>
+{% if loop.index % 3 == 0 and not loop.last %}
+</tr>
+<tr>
+{% endif %}
 {% endfor %}
-</div>
+</tr>
+</table>
 
 {{ profile.bio }}
 
@@ -49,13 +58,18 @@ I am also creating small applications with a very specific usage:
 ```mermaid
 radar-beta
   title {{ group.title }}
-  axis {% for item in group['items'] %}{{ item.name | replace(' ', '') }}["{% if item.icon %}{{ item.icon }} {% endif %}{{ item.name }}"]{% if not loop.last %}, {% endif %}{% endfor %}
+  axis {% for item in group['items'] %}{{ item.name | replace(' ', '') }}["{{ item.name }}"]{% if not loop.last %}, {% endif %}{% endfor %}
   curve Skills{ {% for item in group['items'] %}{{ item.value }}{% if not loop.last %}, {% endif %}{% endfor %} }
   max 100
   min 0
   graticule circle
   ticks 5
 ```
+| Icon | Skill | Level |
+| --- | --- | --- |
+{% for item in group['items'] -%}
+| {% if item.icon %}<img src="{{ item.icon }}" alt="{{ item.name }}" height="20" />{% else %}-{% endif %} | {{ item.name }} | {{ item.value }} |
+{% endfor %}
 {% if group.get('items') %}
 {% for item in group['items'] %}
 {% if item.note %}
