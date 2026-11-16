@@ -90,10 +90,10 @@ I have recently started collaboration on an [Astrology application](https://gith
 
 My other big project is a "[Star Encyclopedia](https://github.com/kubow/h808e)" (Summarizing all things around us 🌅) with several sub-projects:
 
-- [ARMs: various machines description](https://github.com/kubow/arms)
-- [Data storing techniques](https://github.com/kubow/datastore)
-- [Mapping / GIS](https://github.com/kubow/map-model)
-- [Productivity](https://github.com/kubow/Productivity)
+- [ARMs: various machines description](https://kubow.github.io/arms/) ([source](https://github.com/kubow/arms))
+- [Data storing techniques](https://kubow.github.io/datastore/) ([source](https://github.com/kubow/datastore))
+- [Mapping / GIS](https://kubow.github.io/map-model/) ([source](https://github.com/kubow/map-model))
+- [Productivity](https://kubow.github.io/Productivity/) ([source](https://github.com/kubow/Productivity))
 - [Programming languages](https://kubow.github.io/prg-concepts/) ([source](https://github.com/kubow/prg-concepts))
 
 
