@@ -2,7 +2,8 @@
 # Local preview of the whole https://kubow.github.io/ :
 #   /         profile page, regenerated from data/ + source/templates/
 #   /<repo>/  every projects.yaml entry with  site: https://kubow.github.io/<repo>/
-#             built with kb/build.sh from the sibling checkout ../<repo>
+#             built with kb/build.sh from a checkout found via KB_SEARCH
+#             (default: ../<repo>, then ../../Space/<repo>)
 # Links to https://kubow.github.io/ are rewritten to local paths, so the
 # profile and the knowledge bases link to each other. Nothing in the repos
 # is modified; output goes to a temp dir. Re-run after changes.
@@ -42,12 +43,19 @@ for group in yaml.safe_load(open(sys.argv[1])):
             print(m.group(1))
 EOF
 )"
+# Where to look for checkouts (colon-separated); first match wins.
+KB_SEARCH="${KB_SEARCH:-$ROOT/..:$ROOT/../../Space}"
 for repo in $repos; do
-  if [[ -d "$ROOT/../$repo" ]]; then
-    echo "== $repo (../$repo)"
-    "$ROOT/kb/build.sh" build "$ROOT/../$repo" "$OUT/$repo" 2>&1 | grep -E 'WARNING|ERROR|Doc file' || true
+  src=""
+  IFS=: read -ra dirs <<< "$KB_SEARCH"
+  for d in "${dirs[@]}"; do
+    if [[ -d "$d/$repo" ]]; then src="$(cd "$d/$repo" && pwd)"; break; fi
+  done
+  if [[ -n "$src" ]]; then
+    echo "== $repo ($src)"
+    "$ROOT/kb/build.sh" build "$src" "$OUT/$repo" 2>&1 | grep -E 'WARNING|ERROR|Doc file' || true
   else
-    echo "== $repo: no checkout at ../$repo, link will 404"
+    echo "== $repo: no checkout in $KB_SEARCH, link will 404"
   fi
 done
 
