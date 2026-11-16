@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'kb/**'
+      - '.github/workflows/kb-pages.yml'
   workflow_dispatch:
 
 permissions:

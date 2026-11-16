@@ -1,0 +1,58 @@
+# Reusable workflow: publish a knowledge-base repo to https://kubow.github.io/<repo>/
+#
+# Caller (.github/workflows/pages.yml in the content repo):
+#   on: { push: { branches: [main] }, workflow_dispatch: {} }
+#   permissions: { contents: read, pages: write, id-token: write }
+#   jobs:
+#     pages:
+#       uses: kubow/kubow.github.io/.github/workflows/kb-pages.yml@main
+name: Knowledge base pages
+
+on:
+  workflow_call:
+    inputs:
+      kb-ref:
+        description: Ref of kubow.github.io to take the kb/ tooling from
+        type: string
+        default: main
+
+concurrency:
+  group: pages-${{ github.repository }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: content
+      - uses: actions/checkout@v4
+        with:
+          repository: kubow/kubow.github.io
+          ref: ${{ inputs.kb-ref }}
+          path: kb-tools
+          sparse-checkout: kb
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: kb-tools/kb/requirements.txt
+      - run: pip install -r kb-tools/kb/requirements.txt
+      - run: kb-tools/kb/build.sh build content "$RUNNER_TEMP/site"
+        env:
+          KB_REPO: ${{ github.repository }}
+          KB_BRANCH: ${{ github.event.repository.default_branch }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

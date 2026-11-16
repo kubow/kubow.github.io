@@ -36,7 +36,7 @@
 My other big project is a "[Star Encyclopedia]({{ group.url }})" ({{ group.description }}) with several sub-projects:
 
 {% for sub in group.sub_projects -%}
-- [{{ sub.name }}]({{ sub.url }})
+- [{{ sub.name }}]({{ sub.site or sub.url }}){% if sub.site %} ([source]({{ sub.url }})){% endif %}
 {% endfor %}
 {% endif %}
 {% endfor %}

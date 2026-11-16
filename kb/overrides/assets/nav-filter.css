@@ -1,0 +1,34 @@
+.nav-filter {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 0 0.6rem 0.6rem;
+  background: var(--md-default-bg-color);
+}
+
+.nav-filter__input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.4rem 0.6rem;
+  font: inherit;
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color);
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  outline: none;
+}
+
+.nav-filter__input:focus {
+  border-color: var(--md-accent-fg-color);
+}
+
+.nav-filter__empty {
+  padding: 0.4rem 0.2rem 0;
+  font-size: 0.65rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-nav__item.nav-filter--hidden {
+  display: none;
+}

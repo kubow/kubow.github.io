@@ -173,7 +173,8 @@
                 <div class="projects-grid">
                     {% for sub in group.get('sub_projects', []) %}
                     <div class="card">
-                        <h4><a href="{{ sub.url }}">{{ sub.name }}</a></h4>
+                        <h4><a href="{{ sub.site or sub.url }}">{{ sub.name }}</a></h4>
+                        {% if sub.site %}<p><a href="{{ sub.url }}">source</a></p>{% endif %}
                     </div>
                     {% endfor %}
                     

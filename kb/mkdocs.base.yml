@@ -1,0 +1,55 @@
+# Shared MkDocs config for knowledge-base repos (markdown folders at repo root).
+# build.sh generates the per-repo config that INHERITs this one.
+
+theme:
+  name: material
+  features:
+    - navigation.indexes
+    - navigation.top
+    - navigation.instant
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra:
+  homepage: https://kubow.github.io/
+
+extra_javascript:
+  - assets/nav-filter.js
+extra_css:
+  - assets/nav-filter.css
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.details
+
+exclude_docs: |
+  *.ps1
+  *.bat
+  *.canvas
+  requirements.txt
+  venv/
+  site/

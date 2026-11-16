@@ -5,3 +5,4 @@ requests
 cairosvg
 pyyaml
 jinja2
+markdown

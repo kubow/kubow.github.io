@@ -12,6 +12,7 @@
       url: "https://github.com/kubow/Productivity"
     - name: "Programming languages"
       url: "https://github.com/kubow/prg-concepts"
+      site: "https://kubow.github.io/prg-concepts/"
 
 - category: "Small Applications"
   description: "Small applications with specific usage"

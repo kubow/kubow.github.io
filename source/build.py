@@ -1,6 +1,7 @@
 import os
 import yaml
 import sys
+import argparse
 import shutil
 import traceback
 import re
@@ -157,10 +158,9 @@ def render_template(template_name, output_path, **kwargs):
         env.filters['markdown_inline'] = markdown_inline
         env.filters['markdown_text'] = markdown_text
     except ImportError:
-        print("Warning: 'markdown' module not found. Markdown rendering will be disabled.")
-        env.filters['markdown'] = lambda text: text
-        env.filters['markdown_inline'] = lambda text: text
-        env.filters['markdown_text'] = lambda text: text
+        # Without it the HTML page would show raw [text](url) links.
+        print("Error: 'markdown' module not found (pip install -r source/requirements.txt).")
+        sys.exit(1)
 
     template = env.get_template(template_name)
     
@@ -172,12 +172,17 @@ def render_template(template_name, output_path, **kwargs):
     print(f"✓ Generated {output_path}")
 
 def main():
+    parser = argparse.ArgumentParser(description="Generate README.md, docs/index.html and charts")
+    parser.add_argument('--out', help="write everything into this directory instead of the repo (used by preview.sh)")
+    args = parser.parse_args()
+
     print("Starting bio update process...")
     
     # Determine paths
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(script_dir)
-    docs_dir = os.path.join(project_root, 'docs')
+    docs_dir = os.path.abspath(args.out) if args.out else os.path.join(project_root, 'docs')
+    readme_dir = docs_dir if args.out else project_root
     assets_dir = os.path.join(docs_dir, 'assets')
     
     if not os.path.exists(docs_dir):
@@ -237,7 +242,7 @@ def main():
     # Step 2: Render README
     print("\n--- Generating README.md ---")
     try:
-        readme_path = os.path.join(project_root, 'README.md')
+        readme_path = os.path.join(readme_dir, 'README.md')
         render_template('README.md.j2', readme_path, profile=profile, projects=projects, skills=skills, experience=experience)
     except Exception as e:
         traceback.print_exc()
